@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Repository {
 
     private Product[] products = new Product[0];
+
     public void save(Product product){
         int length = products.length + 1;
         Product[] tmp = new Product[length];

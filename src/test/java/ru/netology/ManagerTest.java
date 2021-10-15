@@ -12,19 +12,23 @@ class ManagerTest {
     Repository repository = new Repository();
     Manager manager = new Manager(repository);
 
-    Book book1 = new Book (1, "Преступление и наказание", 300, "Достоевский");
-    Book book2 = new Book (2, "Белая Гвардия", 200, "Булгаков");
-    Smartphone smartphone1 = new Smartphone (1, "Huawei", 20000, "H");
-    Smartphone smartphone2 = new Smartphone (2, "Samsung", 35000, "S");
+
+    Book book1 = new Book(1, "Преступление и наказание", 300, "Достоевский");
+    Book book2 = new Book(2, "Белая Гвардия", 200, "Булгаков");
+    Product smartphone1 = new Smartphone(1, "Huawei", 20000, "H");
+    Product smartphone2 = new Smartphone(2, "Samsung", 35000, "S");
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         manager.add(book1);
         manager.add(book2);
         manager.add(smartphone1);
         manager.add(smartphone2);
 
     }
+
+
+
 
 
     @Test
