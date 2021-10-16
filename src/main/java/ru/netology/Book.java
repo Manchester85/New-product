@@ -31,6 +31,24 @@ public class Book extends Product {
     public int hashCode() {
         return Objects.hash(author);
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author='" + author + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean matches(String search){
+           if (matches(search)) {
+                return true;
+            }
+           if (getAuthor().contains(search)) {
+                return true;
+            }
+            return false;
+    }
 }
 
 

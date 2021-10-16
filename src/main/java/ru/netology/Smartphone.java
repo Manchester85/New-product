@@ -31,6 +31,27 @@ public class Smartphone extends Product {
     public int hashCode() {
         return Objects.hash(manufacturer);
     }
-}
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "manufacturer='" + manufacturer + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean matches(String search) {
+        if (matches(search)) {
+            return true;
+        }
+            if (getManufacturer().contains(search)) {
+                return true;
+            }
+            return false;
+        }
+    }
+
+
+
 
 
