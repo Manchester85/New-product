@@ -1,4 +1,4 @@
-package ru.netology;
+package ru.netology.domain;
 
 import java.util.Objects;
 
@@ -6,7 +6,6 @@ public abstract class Product {
     private int id;
     private String name;
     private int price;
-
 
     public Product(int id, String name, int price) {
         this.id = id;
@@ -41,7 +40,6 @@ public abstract class Product {
         this.price = price;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,7 +61,6 @@ public abstract class Product {
                 ", price=" + price +
                 '}';
     }
-
 
     public abstract boolean matches(String search);
 }

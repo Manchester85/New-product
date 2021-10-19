@@ -1,11 +1,12 @@
-package ru.netology;
+package ru.netology.manager;
+
+import ru.netology.repository.Repository;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 
 public class Manager {
-
     private Repository repository;
-
-
-
 
     public Manager(Repository repository) {
         this.repository = repository;
@@ -14,7 +15,6 @@ public class Manager {
     public void add(Product product) {
         repository.save(product);
     }
-
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
@@ -40,7 +40,6 @@ public class Manager {
             }
             return false;
         }
-
         if (product instanceof Smartphone) { // если в параметре product лежит объект класса Book
             Smartphone smartphone = (Smartphone) product; // положем его в переменную типа Book чтобы пользоваться методами класса Book
             if (smartphone.getManufacturer().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
@@ -53,7 +52,6 @@ public class Manager {
         }
         return false;
     }
-
 }
 
 

@@ -1,4 +1,4 @@
-package ru.netology;
+package ru.netology.domain;
 
 import java.util.Objects;
 
@@ -17,7 +17,6 @@ public class Smartphone extends Product {
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -44,12 +43,12 @@ public class Smartphone extends Product {
         if (matches(search)) {
             return true;
         }
-            if (getManufacturer().contains(search)) {
-                return true;
-            }
-            return false;
+        if (getManufacturer().contains(search)) {
+            return true;
         }
+        return false;
     }
+}
 
 
 
